@@ -17,5 +17,9 @@ export default class User extends Vue {
   get user(): string {
     return `User id is: ${this.userId}`;
   }
+
+  mounted() {
+    this.userId = this.$route.params.userId;
+  }
 }
 </script>
